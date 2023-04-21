@@ -6,13 +6,12 @@ let schema=new mongoose.schema({
     website:{type:String,required:true},
     description:{type:String,required:true},
     active:{type:Boolean,required: true},
-    user_id:
-{
+    user_id:{
     type:mongoose.Types.ObjectId,
     ref: "users",
     required:true
 },
-})
+},{timestime:true})
 
 let collection = "companies"
 let Company = mongoose.model(schema,collection)
