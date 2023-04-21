@@ -1,4 +1,9 @@
-export let companies = [{
+
+
+
+
+ export let companies = [{ 
+
     name: "Peace",
     logo: "https://i.postimg.cc/kgQgTVVw/W4-Wjxsq-ZW-1300x655-1.jpg",
     website: "https://purpleteam-minga.com",
@@ -14,4 +19,4 @@ export let companies = [{
     user_id: "id de usuario 8",
     active: true,
     user_id: "digital@team.com.ar"
-}]
+}] 
