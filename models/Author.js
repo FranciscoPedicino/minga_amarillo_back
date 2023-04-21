@@ -1,20 +1,20 @@
 import {Schema,Types,model} from 'mongoose'
 
 
-let schema =new schema({
+let schema =new Schema({
 name:{type:String ,required:true},
-last_name:{type:Number, required:false},
+last_name:{type:String, required:false},
 city:{type:String ,required:true},
-conutry:{type:String ,required:true},
-date:{type:Date,required:true},
+country:{type:String ,required:true},
+date:{type:Date},
 photo:{type:String ,required:true},
 active:{type:Boolean, reuquired:true },
-users_id:{type:Types.ObjectId,
+user_id:{type:Types.ObjectId,
 ref:'users',
 required:true}
 
 
-})
+},{timestamps:true})
 let collection='authors'
-let Authors=(schema,collection)
+let Authors=model ( collection ,schema)
 export default Authors 

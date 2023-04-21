@@ -1,6 +1,6 @@
-import mongoose from "mongoose";
+import mongoose  from "mongoose";
 
-let schema = new mongoose.schema({
+let schema = new mongoose.Schema({
     name:{type:String,required:true},
     color:{type:String,required:true},
     hover:{type:String,required:true},
@@ -8,7 +8,7 @@ let schema = new mongoose.schema({
     cover_photo:{type:String,required:true},
     character_photo:{type:String,required:true},
 },
-{timestime:true})
+{timestamps:true})
 let collection='categories'
-let Category=mongoose.model(schema,collection )
+let Category=mongoose.model( collection ,schema)
 export default Category
